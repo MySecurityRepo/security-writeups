@@ -11,6 +11,7 @@ The Web Application Architecture is essentially constitued by:
 So the request flow, would be:
 
 [ Untrusted Zone ]
+
    Browser
       |
       v
