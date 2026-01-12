@@ -14,7 +14,7 @@ So the request flow, would be:
 
    Browser
    
-      
+      |
       v
       
      CDN
