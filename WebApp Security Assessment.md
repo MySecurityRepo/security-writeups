@@ -42,7 +42,9 @@ With server configuration we mean the configuration of the machine hosting the w
 
 Moving forward other possible measure that can be taken, would be:
 
-- 
+- Implementation of IPS/IDS for traffic analysis.
+- Implementation of log monitoring systems and SIEM.
+- Implementation of other in depth measures (ex: YARA...)
 
 
 
