@@ -3,6 +3,7 @@
 During the development and deployment of a web application i considered a great learning opportunity to address its security on my own.
 In the following there are some consideration and steps that i took in order to provide myself the security level i was striving for.
 
+
 ****************************1 Architecture****************************
 
 The Web Application we are talking about is essentially a blog/social network.
