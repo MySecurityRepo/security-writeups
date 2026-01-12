@@ -20,6 +20,15 @@ So in this case the request flow is:
 ![diagram](images/Diagram1.png)
 
 
+
+
+****************************1 Server Configuration****************************
+
+With server configuration we mean the configuration of the machine hosting the website/application...to not be confused with web server service (like nginx, apache) which performs the actions explained above.
+
+
+
+
 ****************************2 CDN****************************
 
 We will not go through the secure configuration of the CDN, because is CDN specific and it has to be done on the CDN site. However, i'd suggest to not skip that part as it provides another layer of security to internet facing services.
