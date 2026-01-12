@@ -33,10 +33,10 @@ A point that is worth mentioning is that, if we configured the CDN with DNS reco
 ****************************2 Server Configuration****************************
 
 With server configuration we mean the configuration of the machine hosting the website/application...to not be confused with a web server service (like nginx, apache) which performs the actions explained above. To secure the remote server i did the following:
-- Closed all the ports, on external interfaces, except the ports i needed through firewall rules.
+- Closed all the ports, on external interfaces, except the ports i needed, through firewall rules.
 - Hardened the ssh configuration.
-- Applied the principle of least privilege to running services (for example the user running the webserver shouldn't be the same user which runs the db service, and they should be both not privileged users, for example without sudo privileges).
-- Configured service which don't need to be exposed on the internet, to run on internal ports only.
+- Applied the principle of least privilege to running services (for example the user running the webserver shouldn't be the same user which runs the db service, and they should be both non-privileged users, for example without sudo privileges).
+- Configured service which don't need to be exposed on the internet to run only on internal ports.
 
 
 
