@@ -22,18 +22,22 @@ So in this case the request flow is:
 
 
 
-****************************1 Server Configuration****************************
+
+****************************1 CDN****************************
+
+We will not go through the secure configuration of the CDN, because is CDN specific and it has to be done on the CDN site. However, i'd suggest to not skip that part as it provides another layer of security to internet facing services.
+
+A point that is worth mentioning is that, if we configured the CDN with DNS records pointing to our domain, when a request is made the CDN will process it then it will redirect all the requests made to our domain to our origin (IP address of our server). But if someone already knows the actual IP address of our server, it will be able to direclty make requests to it, thus bypassing the CDN service and all its protection mechanisms.
+
+
+****************************2 Server Configuration****************************
 
 With server configuration we mean the configuration of the machine hosting the website/application...to not be confused with a web server service (like nginx, apache) which performs the actions explained above.
 
 
 
 
-****************************2 CDN****************************
 
-We will not go through the secure configuration of the CDN, because is CDN specific and it has to be done on the CDN site. However, i'd suggest to not skip that part as it provides another layer of security to internet facing services.
-
-A point that is worth mentioning is that, if we configured the CDN with DNS records pointing to our domain, when a request is made the CDN will process it then it will redirect all the requests made to our domain to our origin (IP address of our server). But if someone already knows the actual IP address of our server, it will be able to direclty make requests to it, thus bypassing the CDN service and all its protection mechanisms.
 
 
 ****************************3 Web Server Configuration****************************
