@@ -28,6 +28,10 @@ A point that is worth mentioning is that, if we configured the CDN with DNS reco
 
 ****************************3 Web Server Configuration****************************
 
+These are some security configurations we could enforce on the webserver:
+- Choose only modern SSL protocols like TLSv1.2, TLSv1.3: this disable insicure and cryptographically weak versions of the protocol.
+- Apply rate limiting: We can limit the requests made per seconds from a certain IP; this is a line of defense against brute forcing and certain types of DOS attacks.
+
 
 
 
