@@ -16,6 +16,7 @@ The Application Architecture is constitued by:
 
 So in this case the request flow is:
 
+![diagram](Diagram1.png)
 
 
 
