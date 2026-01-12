@@ -19,8 +19,10 @@ So in this case the request flow is:
 ![diagram](images/Diagram1.png)
 
 
-
 ****************************Web Server Configuration****************************
+
+We will not go through the secure configuration of the CDN, because is CDN specific and it has to be done on the CDN site. However, i'd suggest to not skip that part as it provides another layer of security to internet facing services.
+
 
 
 
