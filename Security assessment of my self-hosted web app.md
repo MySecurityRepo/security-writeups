@@ -13,12 +13,17 @@ So the request flow, would be:
 [ Untrusted Zone ]
 
    Browser
-      |
+   
+      
       v
+      
      CDN
+     
       |
       v
+      
 -----------------------------  ← trust boundary
+
 [ Partially Trusted Zone ]
    Web Server
       |
