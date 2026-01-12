@@ -8,32 +8,8 @@ The Web Application Architecture is essentially constitued by:
 - A Webserver; having also a role of a reverse proxy
 - A CDN; this too having also the role of a reverse proxy
 
-So the request flow, would be:
+So in this case  the request flow is:
 
-[ Untrusted Zone ]
-
-   Browser
-   
-      |
-      v
-      
-     CDN
-     
-      |
-      v
-      
------------------------------  ← trust boundary
-
-[ Partially Trusted Zone ]
-   Web Server
-      |
-      v
-Backend Application
-      |
-      v
------------------------------  ← strongest trust boundary
-[ Trusted Zone ]
-     Database
 
 
 
