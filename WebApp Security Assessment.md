@@ -32,10 +32,11 @@ A point that is worth mentioning is that, if we configured the CDN with DNS reco
 
 ****************************2 Server Configuration****************************
 
-With server configuration we mean the configuration of the machine hosting the website/application...to not be confused with a web server service (like nginx, apache) which performs the actions explained above. To secure the remote server i did the following:
+With server configuration we mean the configuration of the machine hosting the website/application...to not be confused with a web server service (like nginx, apache, IIS) which performs the actions explained above. To secure the remote server i did the following:
 - Closed all the ports, on external interfaces, except the ports i needed, through firewall rules.
 - Hardened the ssh configuration.
-- Applied the principle of least privilege to running services (for example the user running the webserver shouldn't be the same user which runs the db service, and they should be both non-privileged users, for example without sudo privileges).
+- Limited access to sensible folders only to the corresponding user.
+- Applied the principle of least privilege to users and running services (for example the user running the webserver shouldn't be the same user which runs the db service, and they should be both non-privileged users, for example without sudo privileges).
 - Configured service which don't need to be exposed on the internet to run only on internal ports.
 - Applied full disk encryption; this is a security measure against physical theft.
 - Set up AV scanning for the upload folder, as a defense in depth measure against known malware.
@@ -44,7 +45,7 @@ Moving forward other possible measure that can be taken (but which are out of sc
 
 - Implementation of IPS/IDS for traffic analysis.
 - Implementation of log monitoring systems and SIEM.
-- Implementation of other in depth measures (ex: YARA...)
+- Implementation of other in depth measures (ex: YARA...).
 
 
 
@@ -55,6 +56,9 @@ Moving forward other possible measure that can be taken (but which are out of sc
 These are some security configurations we could enforce on the webserver:
 - Choose only modern SSL protocols like TLSv1.2, TLSv1.3: this disable insicure and cryptographically weak versions of the protocol.
 - Apply rate limiting: We can limit the requests made per seconds from a certain IP; this is a line of defense against brute forcing and certain types of DOS attacks.
+- Redirect to port 443 over https all the request made to port 80 over http.
+- Add HTTP headers; the right HTTP headers enable us to enhance security disallowing certain types of attacks. Examples of such headers are: X-Content-Type-Options, Content-Security-Policy, X-Frame-Options, Referrer-Policy, Strict-Transport-Security.
+- 
 
 
 
