@@ -53,11 +53,11 @@ Moving forward other possible measure that can be taken (but which are out of sc
 
 ****************************3 Web Server Configuration****************************
 
-These are some security configurations we could enforce on the webserver:
-- Choose only modern SSL protocols like TLSv1.2, TLSv1.3: this disable insicure and cryptographically weak versions of the protocol.
-- Apply rate limiting: We can limit the requests made per seconds from a certain IP; this is a line of defense against brute forcing and certain types of DOS attacks.
-- Redirect to port 443 over https all the request made to port 80 over http.
-- Add HTTP headers; the right HTTP headers enable us to enhance security disallowing certain types of attacks. Examples of such headers are: X-Content-Type-Options, Content-Security-Policy, X-Frame-Options, Referrer-Policy, Strict-Transport-Security.
+These are some security configurations i enforced on the webserver:
+- Chosen only modern SSL protocols like TLSv1.2, TLSv1.3: this disable insicure and cryptographically weak versions of the protocol.
+- Applied rate limiting: We can limit the requests made per seconds from a certain IP; this is a line of defense against brute forcing and certain types of DOS attacks.
+- Redirected to port 443 over https all the request made to port 80 over http.
+- Added HTTP headers; the right HTTP headers enable us to enhance security disallowing certain types of attacks. Examples of such headers are: X-Content-Type-Options, Content-Security-Policy, X-Frame-Options, Referrer-Policy, Strict-Transport-Security.
 - 
 
 
