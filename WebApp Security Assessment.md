@@ -24,7 +24,7 @@ So in this case the request flow is:
 
 ****************************1 Server Configuration****************************
 
-With server configuration we mean the configuration of the machine hosting the website/application...to not be confused with web server service (like nginx, apache) which performs the actions explained above.
+With server configuration we mean the configuration of the machine hosting the website/application...to not be confused with a web server service (like nginx, apache) which performs the actions explained above.
 
 
 
