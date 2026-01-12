@@ -38,7 +38,7 @@ With server configuration we mean the configuration of the machine hosting the w
 - Applied the principle of least privilege to running services (for example the user running the webserver shouldn't be the same user which runs the db service, and they should be both non-privileged users, for example without sudo privileges).
 - Configured service which don't need to be exposed on the internet to run only on internal ports.
 - Applied full disk encryption; this is a security measure against physical theft.
-- Set up AV scanning for the upload folder.
+- Set up AV scanning for the upload folder, as a defense in depth measure against known malware.
 
 Moving forward other possible measure that can be taken, would be:
 
