@@ -5,4 +5,4 @@ Each of them was written based on projects or labs i worked on during my free ti
 
 I hope you'll enjoy them.
 
-![My WebApp Security Assesment] (https://github.com/MySecurityRepo/security-writeups/blob/main/My%20Webapp%20Security%20Assessment.md) explains how i tried to reach a good level of security in my custom web application.
+[My WebApp Security Assesment](https://github.com/MySecurityRepo/security-writeups/blob/main/My%20Webapp%20Security%20Assessment.md) explains how i tried to reach a good level of security in my custom web application.
