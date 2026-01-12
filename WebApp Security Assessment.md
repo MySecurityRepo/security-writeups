@@ -40,7 +40,7 @@ With server configuration we mean the configuration of the machine hosting the w
 - Applied full disk encryption; this is a security measure against physical theft.
 - Set up AV scanning for the upload folder, as a defense in depth measure against known malware.
 
-Moving forward other possible measure that can be taken, would be:
+Moving forward other possible measure that can be taken (but which are out of scope initially given the app dimension) are:
 
 - Implementation of IPS/IDS for traffic analysis.
 - Implementation of log monitoring systems and SIEM.
