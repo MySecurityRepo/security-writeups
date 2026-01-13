@@ -95,9 +95,13 @@ We should always perform this type of input validation, for every user input, wh
 *********************4.2 OS Command Injection and Code Injection*********************
 
 To prevent this kind of vulnerabilities, the first thing is to avoid using functions that can execute system commands or functions which can execute code.
-For our case since we are considering python, functions which execute OS commands are some functions belonging to the os library (os.system, os.popen,...) or the subprocess library (subprocess.run, subprocess.Popen).
+
+For our case since we are considering python, functions which execute OS commands are, for example, some functions belonging to the os library (os.system, os.popen,...) or the subprocess library (subprocess.run, subprocess.Popen).
+
 Functions capable to inject code are: eval, exec, compile, pickle...
+
 If it's necessary to use them, we should always keep in mind what we are doing and never pass them unsanitized/unvalidated user input.
+
 The same concepts regarding validation/sanitization explained above are still valid in this case.
 
 
