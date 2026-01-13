@@ -130,6 +130,7 @@ should be infeasible because python code is not directly executed, without an ex
 Even though execution of code from malicious files seems unreasonable in this case, is always best practice to validate the uploaded file extentions, MIME type and content, where possible. To validate MIME type and extension the usage of whitelists is generally more secure than blacklists usage. While for validating the content you would have to refer to the libraries available for the language/framework you are using.
 
 
+Since in our case we are on Linux, i'm also removing the file execution permissions, right after is uploaded.
 
 
 
