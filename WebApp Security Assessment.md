@@ -123,7 +123,7 @@ exec(open(uploaded_file).read())
 
 So an attack path like: 
 
-Upload a web shell \ reverse shell --- > navigate to the shell on the browser and interact
+Upload a web shell \ reverse shell --- > interact with it from the browser / curl
 
 should be infeasible because python code is not directly executed, without an execution path.
 
