@@ -71,6 +71,15 @@ A safe setup against SQL injection attacks is the use of spefic libraries, consi
 
 ![diagram](images/SQLAlchemy.png)
 
+The fact that the process of query construction is splitted in 2 steps:
+- SQL query parsing
+- Passage of the parameter at execution time
+should prevent SQLi, because the DB never reparses the query afterwards.
+You can refer to the official documentation for a more complete explanation.
+
+Beside this measure which while being veery effective, is still application and language specific, safe coding practices are still valid and should be always adapoted.
+
+
 
 
 
