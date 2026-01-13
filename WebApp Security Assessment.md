@@ -74,6 +74,7 @@ A safe setup against SQL injection attacks is the use of spefic libraries, consi
 The fact that the process of query construction is splitted in 2 steps:
 - SQL query parsing
 - Passage of the parameter at execution time
+
 should prevent SQLi, because the DB never reparses the query afterwards.
 You can refer to the official documentation for a more complete explanation.
 
@@ -85,7 +86,7 @@ We can do that, using regular expressions:
 
 ![diagram](images/ValidUser2.png)
 
-
+We should always perform this type of input validation, for every user input, which will be saved in the database, regardless if we are using a database library or not.
 
 
 
