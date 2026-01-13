@@ -57,7 +57,7 @@ These are some security configurations i enforced on the webserver:
 - Chosen only modern SSL protocols like TLSv1.2, TLSv1.3: this disable insicure and cryptographically weak versions of the protocol.
 - Applied rate limiting: We can limit the requests made per seconds from a certain IP; this is a line of defense against brute forcing and certain types of DOS attacks.
 - Redirected to port 443 over https all the request made to port 80 over http.
-- Added HTTP headers; the right HTTP headers enable us to enhance security disallowing certain types of attacks. Examples of such headers are: X-Content-Type-Options, Content-Security-Policy, X-Frame-Options, Referrer-Policy, Strict-Transport-Security.
+- Added HTTP headers; the right HTTP headers enable us to enhance security disallowing certain types of attacks (like XXS or clickjacking). Examples of such headers are: X-Content-Type-Options, Content-Security-Policy, X-Frame-Options, Referrer-Policy, Strict-Transport-Security.
 - Limit requests size to disallow certain types of DOS attacks.
 
 In the following instead of focusing on the measures we have implemented respectively on the frontend and the backend, we will do a summary of the principal types of vulnerabilities, and explain how we are defending against them.
@@ -66,7 +66,7 @@ In the following instead of focusing on the measures we have implemented respect
 
 
 *********************4.1 SQL Injection*********************
-
+A safe setup against SQL injection attacks is the use of spefic libraries, considered safe for that purpose, in the language you are using. For example, in my case i was using Python. A database library that is considered safe in python is SQLAlchemy. This is because when you pass a parameter in a SQLAlchemy operation, it will build a query passing a placeholder to it; then it will pass the parameter value at execution time as a string.
 
 
 
