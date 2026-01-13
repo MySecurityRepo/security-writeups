@@ -60,6 +60,10 @@ These are some security configurations i enforced on the webserver:
 - Added HTTP headers; the right HTTP headers enable us to enhance security disallowing certain types of attacks. Examples of such headers are: X-Content-Type-Options, Content-Security-Policy, X-Frame-Options, Referrer-Policy, Strict-Transport-Security.
 - Limit requests size to disallow certain types of DOS attacks.
 
+In the following instead of focusing on the measures we have implemented respectively on the frontend and the backend, we will do a summary of the principal types of vulnerabilities, and explain how we are defending against them.
+
+
+
 
 
 
