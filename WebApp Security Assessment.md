@@ -81,6 +81,8 @@ Beside these measures which, while being very effective, are still application a
 For example, if we want to use the previous query, we should perform validation and sanitization to ensure that the value passed to it, doesn't contain special characters.
 We can do that, using regular expressions:
 
+![diagram](images/ValidUser1.png)
+
 
 
 
