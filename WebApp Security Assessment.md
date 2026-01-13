@@ -83,6 +83,8 @@ We can do that, using regular expressions:
 
 ![diagram](images/ValidUser1.png)
 
+![diagram](images/ValidUser2.png)
+
 
 
 
