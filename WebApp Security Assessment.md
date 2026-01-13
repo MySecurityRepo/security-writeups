@@ -131,7 +131,7 @@ should be infeasible because python code is not directly executed, without an ex
 Even though execution of code from malicious files seems unreasonable in this case, is always best practice to validate the uploaded file extentions, MIME type and content, where possible. To validate MIME types and extensions comparing them against a whitelist is generally more secure than comparing them against a blacklist. While to validate the content you would have to refer to the libraries available for the language/framework you are using.
 
 
-Since in our case we are on Linux, i'm also removing the file execution permissions, right after the file is uploaded.
+Since in our case we are on Linux, i'm also removing the file execution permissions, right after the file is uploaded. With this measures we should be sufficiently confident to be avaoiding RCE due to malicious file uploads.
 
 
 
