@@ -152,6 +152,11 @@ A misconfiguration of parameters of the first type, can lead to stored XSS or un
 
 *****************4.6 Path Traversal*****************
 
+Is possible to have directory/path traversal vulnerabilities when the webserver or the web application serves different pages based on a request made from the frontend. In this case if there is a misconfiguration is possible to pass a value in the url which allow us to load files, outside the original scope of the application.
+
+In the case of this application, however we are using a very specific frontend framework, and from the webserver we are serving always the same file (this structure is called Single Page Application). Navigation is handled internally in the SPA, instead of loading every time a different html file. For this reason directory traversal shouldn't be possible.
+
+
 
 
 
