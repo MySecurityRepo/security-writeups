@@ -64,8 +64,9 @@ In the following instead of focusing on the measures we have implemented respect
 
 ****************************4 Vulnerability Types****************************
 
+For all the vulnerability types, the main prevention must happen on the backend, since a malicious user can always change the frontend code to change the behavior on the client side.
 
-*********************4.1 SQL Injection*********************
+*********************4.1 SQL Injection********************* 
 
 A safe setup against SQL injection attacks is the use of spefic libraries, considered safe for that purpose, in the language you are using. For example, in my case i was using Python. A database library that is considered safe in python is SQLAlchemy. This is because when you pass a parameter in a SQLAlchemy operation, it will build a query passing a placeholder to it; then it will pass the parameter value at execution time as a string.
 
@@ -90,6 +91,14 @@ We should always perform this type of input validation, for every user input, wh
 
 
 
+
+*********************4.2 OS Command Injection and Code Injection*********************
+
+To prevent this kind of vulnerabilities, the first thing is to avoid using functions that can execute system commands or functions which can execute code.
+For our case since we are considering python, functions which execute OS commands are some functions belonging to the os library (os.system, os.popen,...) or the subprocess library (subprocess.run, subprocess.Popen).
+Functions capable to inject code are: eval, exec, compile, pickle...
+When using such functions we should always keep in mind what we are doing and never pass them unsanitized/unvalidated user input.
+The same concepts regarding validation/sanitization explained above are still valid in this case.
 
 
 
