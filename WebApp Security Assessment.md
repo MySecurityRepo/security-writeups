@@ -123,9 +123,13 @@ exec(open(uploaded_file).read())
 
 So an attack path like: 
 
-Upload a web shell --- > navigate to the shell on the browser and submit a command
+Upload a web shell \ reverse shell --- > navigate to the shell on the browser and interact
 
 should be infeasible because python code is not directly executed, without an execution path.
+
+Even though execution of code from malicious files seems unreasonable in this case, is always best practice to validate the uploaded file extentions, MIME type and content, where possible. To validate MIME type and extension the usage of whitelists is generally more secure than blacklists usage. While for validating the content you would have to refer to the libraries available for the language/framework you are using.
+
+
 
 
 
