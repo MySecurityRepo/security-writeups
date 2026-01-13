@@ -137,6 +137,12 @@ With these measures we should be reasonably confident to be avoiding RCE due to 
 
 
 
+*****************4.5 File Inclusion*****************
+
+Is possible to have a file inclusion vulnerability when based on the value of a parameter coming from the frontend, the server include a specific file to be displayed on a page. If the parameter is not correctly validated/sanitized and compared against a wordlist is possible to include files uninted for the normal application usage (i.e. server files like /etc/passwd). Moreover if the function that is including the files have execution capabilities and/or the capability to include remote file, the vulnerability is even more serious and can lead to remote file inclusion and even RCE.
+
+In the case of this application however we are never including files, but can still have vulnerabilities related to weak parameters configurations. We are using parameters mainly in the following ways:
+
 
 
 
