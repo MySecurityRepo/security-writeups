@@ -69,6 +69,7 @@ In the following instead of focusing on the measures we have implemented respect
 
 A safe setup against SQL injection attacks is the use of spefic libraries, considered safe for that purpose, in the language you are using. For example, in my case i was using Python. A database library that is considered safe in python is SQLAlchemy. This is because when you pass a parameter in a SQLAlchemy operation, it will build a query passing a placeholder to it; then it will pass the parameter value at execution time as a string.
 
+![diagram](images/SQLAlchemy.png)
 
 
 
