@@ -58,7 +58,10 @@ These are some security configurations i enforced on the webserver:
 - Applied rate limiting: We can limit the requests made per seconds from a certain IP; this is a line of defense against brute forcing and certain types of DOS attacks.
 - Redirected to port 443 over https all the request made to port 80 over http.
 - Added HTTP headers; the right HTTP headers enable us to enhance security disallowing certain types of attacks. Examples of such headers are: X-Content-Type-Options, Content-Security-Policy, X-Frame-Options, Referrer-Policy, Strict-Transport-Security.
-- 
+- Limit requests size to disallow certain types of DOS attacks.
+
+
+
 
 
 
