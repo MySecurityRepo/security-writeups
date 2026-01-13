@@ -104,10 +104,13 @@ The same concepts regarding validation/sanitization explained above are still va
 
 *********************4.3 Defense Agains Bruteforcing & Automated Tools*********************
 
-To defend agains bruteforcing, file and directory fuzzing, and use of automated tools, we applied request rate limiters, both at the webserver level and the backend application level.
+To defend agains bruteforcing, file and directory fuzzing, and use of automated tools, we applied request rate limiters, both at the webserver level and at the backend application level.
 If the number of requests for the specified time exceeds the limit, the succesive requests will be rejected with a specific status code.
 
 
+
+
+*********************4.4 File Upload Attacks and File Inclusion*********************
 
 
 
