@@ -62,9 +62,8 @@ These are some security configurations i enforced on the webserver:
 
 In the following instead of focusing on the measures we have implemented respectively on the frontend and the backend, we will do a summary of the principal types of vulnerabilities, and explain how we are defending against them.
 
-****************************4 Vulnerability Types****************************
+*************************4 Vulnerability Types*************************
 
-.
 
 ****************************4.1 SQL Injection****************************
 
