@@ -114,7 +114,7 @@ If the number of requests for the specified time exceeds the limit, the succesiv
 
 
 
-*********************4.4 File Upload Attacks*********************
+*****************4.4 File Upload Attacks*****************
 
 To discuss file upload attacks, we need to specify that even if a python file shell.py was uploaded, it would still need to be executed, by a backend logic.
 That is to be executed would need code like:
