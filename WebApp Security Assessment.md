@@ -114,8 +114,20 @@ If the number of requests for the specified time exceeds the limit, the succesiv
 
 
 
-*********************4.4 File Upload Attacks and File Inclusion*********************
+*********************4.4 File Upload Attacks*********************
 
+We have grouped together these two types of vulnerabilities, because in some cases they depend on each other.
+
+To discuss file upload attacks, we need to specify that even if a python file shell.py was uploaded, it would still need to be executed, by a backend logic.
+So an attack path like: 
+
+Upload a web shell --- > navigate to the shell on the browser and submit a command 
+
+would be infeasible with this architecture.
+
+
+
+To carry out a file upload attack 
 
 
 
