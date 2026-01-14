@@ -165,6 +165,8 @@ There are good code practices that should be adopted client side to avoid these 
 
 When the content is inserted as text into the DOM, it shouldn't be possible to execute malicious Javascript code, so those field are generally not vulnerable. Still is always best practice to validate and sanitize any user input.  
 
+An example of validation would be to strip all the content in the form: <script> .... </script>.
+
 
 
 
