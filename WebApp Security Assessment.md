@@ -159,7 +159,15 @@ In the case of this application, however we are using a very specific frontend f
 
 *****************4.7 Cross Site Scripting - XSS*****************
 
-XSS can happen when user inputs not sufficiently validated are passed to the frontend to be displayed as dynamic (html) content. This can lead to frontend attacks, that is attacks which have the scope of compromising other users sessions, rather aiming directly to compromise the server. In the case of this application the XSS types we need to address are Stored XSS and Reflected XSS, we do not address DOM-based XSS because users input are processed always by the backend and never rendered only client side. 
+XSS can happen when user inputs not sufficiently validated are passed to the frontend to be displayed as dynamic (html) content. This can lead to frontend attacks, that is attacks which have the scope of compromising other users sessions, rather aiming directly to compromise the server. In the case of this application the XSS types we need to address are Stored XSS and Reflected XSS, we do not address DOM-based XSS because users input are processed always by the backend and never rendered only client side.
+
+There are good code practices that should be adopted client side to avoid these types of attacks. If you are using plain javascript, vulnerabilities may be created by the use (without proper sanitization) of functions which writes html content to the DOM (document.write(), DOM.innerHTML, DOM.outerHTML). If you are using a framework, you should be aware that may exist certain functions, which writes content as html (and probably are using the same JS functions mentioned here, internally, to do that).
+
+
+
+
+
+The frontend framework i'm using is Vue.js, 
 
 
 
