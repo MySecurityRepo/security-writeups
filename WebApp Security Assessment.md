@@ -176,7 +176,12 @@ These are examples of validation actions we can perform (and we should if we wan
    
 *****************4.8 Insicure Direct Object References - IDOR*****************
 
-IDOR vulnerabilities can occur when the application exposes an object through direct reference, for example ,since we are examining a social, it can be the reference to a Post by its post id. Normally a post can be modified only by its author, but if the logic in't implemented correctly, a malicious user could exploit the vulnerability, and be able to modify posts no created by different users. 
+IDOR vulnerabilities can occur when the application exposes an object through direct reference, for example ,since we are examining a social, it can be the reference to a Post by its post id. Normally a post can be modified only by its author, but if the logic isn't implemented correctly, a malicious user could exploit the vulnerability, and be able to modify posts no created by different users. It is not simple to defend against this type of vulnerabilities, because certain actions would be, in the application design, only related to the frontend. But since an attacker can always change the code client side, we cannot really perform any selection based on identity or role there.
+
+For every actions, especially creations and modifications (POST, PUT and PATCH requests) the access control has to be performed on the backend. In our case for example, since we are working with a session-based authentication, if we want to modify a post, we should check that the id of the authenticated user matches the id of the author of the post, if it doesn't we should reject the request. A similar approach should be used for every action which aims to modify something, or for every GET request which aims to read confidential content.
+
+
+
 
 
 
