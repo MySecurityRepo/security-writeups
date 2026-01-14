@@ -168,7 +168,7 @@ When the content is inserted as text into the DOM, it shouldn't be possible to e
 These are examples of validation actions we can perform (and we should if we want to render the content as html) on the user generated content to defend against XSS:
 - Strip all the content in the form: <script> .... </script>, <iframe>...</iframe>, ecc...
 - HTML encode special characters like: <,>,",',&...doing this the browser will interpret the characters as text and not code. Some editor use to encode specific characters by default.
-- Use a backend library component capable to filter and sanitize raw HTML. A component capable of doing this in python is bleach.
+- Use a backend library component capable to filter and sanitize raw HTML. A component capable of doing this in python is bleach, with this tool we can give whitelists of tags, attributes and protocol which can be included in the html, then the rest will be stripped off.
 
 
 
