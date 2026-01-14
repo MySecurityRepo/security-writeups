@@ -174,9 +174,9 @@ These are examples of validation actions we can perform (and we should if we wan
 
 
    
+*****************4.8 Insicure Direct Object References - IDOR*****************
 
-
-
+IDOR vulnerabilities can occur when the application exposes an object through direct reference, for example ,since we are examining a social, it can be the reference to a Post by its post id. Normally a post can be modified only by its author, but if the logic in't implemented correctly, a malicious user could exploit the vulnerability, and be able to modify posts no created by different users. 
 
 
 
