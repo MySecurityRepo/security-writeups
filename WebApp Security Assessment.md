@@ -165,7 +165,15 @@ There are good code practices that should be adopted client side to avoid these 
 
 When the content is inserted as text into the DOM, it shouldn't be possible to execute malicious Javascript code, so those field are generally not vulnerable. Still is always best practice to validate and sanitize any user input.  
 
-An example of validation would be to strip, from the user input, all the content in the form: <script> .... </script>.
+These are examples of validation actions we can perform (and we should if we want to render the content as html) on the user generated content to defend against XSS:
+- Strip all the content in the form: <script> .... </script>, <iframe>...</iframe>, ecc...
+- HTML encode special characters like: <,>,",',&...doing this the browser will interpret the characters as text and not code. Some editor use to encode specific characters by default.
+- Use a backend library component capable to filter and sanitize raw HTML. A component capable of doing this in python is bleach.
+
+
+
+
+   
 
 
 
