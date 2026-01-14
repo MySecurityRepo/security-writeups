@@ -35,7 +35,7 @@ A point that is worth mentioning is that, if we configured the CDN with DNS reco
 With server configuration we mean the configuration of the machine hosting the website/application...to not be confused with a web server service (like nginx, apache, IIS) which performs the actions explained above. To secure the remote server i did the following:
 - Closed all the ports, on external interfaces, except the ports i needed, through firewall rules.
 - Hardened the ssh configuration.
-- Limited access to sensible folders only to the corresponding user.
+- Limited access to sensible folders only to the corresponding users.
 - Applied the principle of least privilege to users and running services (for example the user running the webserver shouldn't be the same user which runs the db service, and they should be both non-privileged users, for example without sudo privileges).
 - Configured service which don't need to be exposed on the internet to run only on internal ports.
 - Applied full disk encryption; this is a security measure against physical theft.
@@ -155,6 +155,14 @@ A misconfiguration of parameters of the first type, can lead to stored XSS or un
 Is possible to have directory/path traversal vulnerabilities when the webserver or the web application serves different pages based on a request made from the frontend. In this case if there is a misconfiguration is possible to pass a value in the url which allow us to load files, outside the original scope of the application.
 
 In the case of this application, however we are using a very specific frontend framework, and from the webserver we are serving always the same file (this structure is called Single Page Application). Navigation is handled internally in the SPA, instead of loading every time a different html file. For this reason directory traversal shouldn't be possible.
+
+
+*****************4.7 Cross Site Scripting - XSS*****************
+
+XSS can happen when user inputs not sufficiently validated are passed to the frontend to be displayed as dynamic (html) content. This can lead to frontend attacks, that is attacks which have the scope of compromising other users sessions, rather aiming directly to compromise the server. In the case of this application the XSS types we need to address are Stored XSS and Reflected XSS, we do not address DOM-based XSS because users input are processed always by the backend and never rendered only client side. 
+
+
+
 
 
 
