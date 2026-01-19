@@ -179,12 +179,7 @@ These are examples of validation actions we can perform (and we should if we wan
 IDOR vulnerabilities can occur when the application exposes an object through direct reference, for example ,since we are examining a social, it can be the reference to a Post by its post id. Normally a post can be modified only by its author, but if the logic isn't implemented correctly, a malicious user could exploit the vulnerability, and modify posts created by different users. It is not simple to defend against this type of vulnerabilities, because certain actions would be, in the application design, only related to the frontend. But since an attacker can always change the code client side, we cannot really perform any selection based on identity or role there.
 For example a frontend logic like:
 
-const isAuthor=...
-async function modifyPost(postid) {
-  if (!isAuthor) return
-  ...
-  ...
-}
+![diagram](images/CodeExample.png)
 
 as the sole defense mechanism is not effective because it can be easily bypassed.
 
