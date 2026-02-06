@@ -32,5 +32,17 @@ Looking at app.py, this is the flask route which let's us run the code:
 
 ![diagram](../images/CodePartTwo_appcode.png)
 
-We can see that the code submitted by us in the browser is posted on this route on the backend and then is run with the js2py.eval_js function:
+We can see that the code submitted by us in the browser is posted on this route on the backend, then is run with the js2py.eval_js function.
+This function is used to execute Javascript code in a python context (such as app.py) and return the last expression.
+Is used, among other things, in web scraping.
+Since this library can only execute JS code, i didn't see an attack angle unless it had vulnerable versions.
+So i searched for a vulnerability:
+
+![diagram](../images/CodePartTwo_vuln.png)
+
+
+
+
+
+
 
