@@ -67,3 +67,18 @@ So connecting wo the database with sqlite3 and enumerating the tables we find:
 These are md5 hashes (which can be confirmed also looking at the app source code). Trying to crack with John, we retrieve the marco credentials:
 
 ![diagram](../images/CodePartTwo_john.png)
+
+
+*******4 Privilege Escalation*******
+
+With the marco user and its cute password we can access through ssh, and we can run "ssudo -l":
+
+![diagram](../images/CodePartTwo_sudo.png)
+
+This time marco can run the command **/usr/local/bin/npbackup-cli** with sudo. I didn't know this executable so i searched some info. It is an executable for managing backups. With **npbackup-cli --help**, we can see that the raw option allow us to run commands "against the backend".
+
+![diagram](../images/CodePartTwo_npbackuphelp.png)
+
+So i tried:
+
+![diagram](../images/CodePartTwo_escpayload1.png)
