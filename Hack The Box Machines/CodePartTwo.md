@@ -12,7 +12,7 @@ The result shows that for tcp, only ports 22 and 8000 are open.
 
 I tried to fingerprint the services.
 
-![diagram](../images/CodePartTwo/CodePartTwo_nmapscan1.png)
+![diagram](../images/CodePartTwo/CodePartTwo_nmapscan2.png)
 
 This didn't give too much information, so at this point i visited the web service with the browser.
 
