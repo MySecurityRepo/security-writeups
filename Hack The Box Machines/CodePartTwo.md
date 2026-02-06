@@ -6,7 +6,7 @@ CodePartTwo is an HTB Linux machine classified as Easy.
 
 I always feel safer if i can do an overall port scan. So if the process is fast enough i try it:
 
-![diagram](images/CodePartTwo_nmapscan1.png)
+![diagram](../images/CodePartTwo_nmapscan1.png)
 
 The result shows that for tcp only ports 22 and 8000 are open.
 
