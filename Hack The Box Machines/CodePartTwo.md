@@ -81,4 +81,4 @@ This time marco can run the command **/usr/local/bin/npbackup-cli** with sudo. I
 
 So i tried:
 
-![diagram](../images/CodePartTwo_escpayload1.png)
+![diagram](../images/CodePartTwo_payloadtry1.png)
