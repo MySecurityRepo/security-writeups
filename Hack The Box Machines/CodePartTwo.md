@@ -81,4 +81,9 @@ This time marco can run the command **/usr/local/bin/npbackup-cli** with sudo. I
 
 So i tried:
 
-![diagram](../images/CodePartTwo_payloadtry1.png)
+![diagram](../images/CodePartTwo_restic.png)
+
+The error is suggesting that this binary is using the **restic** command.
+So i looked it up on GTFObins:
+
+![diagram](../images/CodePartTwo_gtfobins.png)
