@@ -71,7 +71,7 @@ These are md5 hashes (which can be confirmed also looking at the app source code
 
 *******4 Privilege Escalation*******
 
-With the marco user and its cute password we can access through ssh, and we can run "ssudo -l":
+With the marco user and its cute password we can access through ssh, and we can run "sudo -l":
 
 ![diagram](../images/CodePartTwo_sudo.png)
 
@@ -83,7 +83,17 @@ So i tried:
 
 ![diagram](../images/CodePartTwo_restic.png)
 
-The error is suggesting that this binary is using the **restic** command.
+The error suggests that this binary is using the **restic** command.
 So i looked it up on GTFObins:
 
 ![diagram](../images/CodePartTwo_gtfobins.png)
+
+I tried the suggested payload:
+
+![diagram](../images/CodePartTwo_payloadtry1.png)
+
+The error suggests that this process cannot spawn a terminal process, indeed we can see that the payload is trying to open an sh shell.
+If we replace the payload with something which runs on the background it could work. At firsst i tried with netcat, but the nc on the target doesn't provide the -e option to spawn /bin/bash, so you would have to transfer nc from your attack machine (or use another payload).
+With this final payload i got the root shell:
+
+![diagram](../images/CodePartTwo_payloadtry2.png)
