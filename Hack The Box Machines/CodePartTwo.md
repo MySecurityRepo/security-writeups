@@ -20,7 +20,7 @@ This didn't give too much information, so at this point i visited the web servic
 
 On the web page we have the option to register, login or download the app source code.
 
-So i downloaded the code and then i proceeded with registration and login.
+I downloaded the code, then i proceeded with registration and login.
 
 Once signed in we are given the possibility to run code. At this point to have a better grasp of the attack angle i went to look at the app source code.
 
@@ -40,9 +40,30 @@ So i searched for a vulnerability:
 
 ![diagram](../images/CodePartTwo_vuln.png)
 
+CVE-2024-28397 allow an attacker to brake the JS sandbox and run commands in the python environment. So we may be able to execute code if we are in the right circumnstances.
+The vulnerability requirements are:
+
+![diagram](../images/CodePartTwo_vulnreq.png)
+
+and looking at the application requirements.txt:
+
+![diagram](../images/CodePartTwo_reqtxt.png)
+
+The library version is vulnerable, also the app is running flask 3.0.3 which supports python3, so with the right payload we should have RCE.
+
+Using the specific PoC for this vulnerability, adjusted with some trial and error you should be able to get RCE as the "app" user.
 
 
+*******3 Lateral Movement*******
 
+The only two users having a home directory are "app" and "marco".
+Having the shell as "app" the first thing i did was "sudo -l", but the user wasn't able to run sudo.
+The second thing i did was to look at the app database.
+We know that we have a db file at app/instance/users.db.
+So connecting wo the database with sqlite3 and enumerating the tables we find:
 
+![diagram](../images/CodePartTwo_hashes.png)
 
+These are md5 hashes (which can be confirmed also looking at the app source code). Trying to crack with John, we retrieve the marco credentials:
 
+![diagram](../images/CodePartTwo_john.png)
