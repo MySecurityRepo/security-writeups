@@ -93,7 +93,7 @@ I tried the suggested payload:
 ![diagram](../images/CodePartTwo_escpayload1.png)
 
 The error suggests that this process cannot spawn a terminal process, indeed we can see that the payload is trying to open an sh shell.
-If we replace the payload with something which runs on the background it could work. At firsst i tried with netcat, but the nc on the target doesn't provide the -e option to spawn /bin/bash, so you would have to transfer nc from your attack machine (or use another payload).
-With this final payload i got the root shell:
+If we replace the payload with something which runs on the background it could work. At first i tried with netcat, but the nc on the target doesn't provide the -e option to spawn /bin/bash, so you would have to transfer nc from your attack machine (or use another payload).
+With this final payload i got the root shell on my listener:
 
 ![diagram](../images/CodePartTwo_escpayload2.png)
