@@ -19,7 +19,7 @@ Also we can confirm that the service running on port 5986 is winrm over HTTPS (M
 
 *******2 Foothold*******
 
-Since SMB is the easier service to interact i started with that one.
+Since SMB is the easier service to interact with i started with that one.
 
 ![diagram](../images/Timelapse/Timelapse_shares.png)
 
@@ -27,7 +27,7 @@ The Guest user has read access over the *Shares* share. So i downloaded everythi
 
 ![diagram](../images/Timelapse/Timelapse_shares2.png)
 
-In the Dev share there is a zip file colled *winrm_backup.zip*. The name suggests that has something to so with winrm, so i tried to extract it:
+In the Dev share there is a zip file colled *winrm_backup.zip*. The name suggests that has something to do with winrm, so i tried to extract it:
 
 ![diagram](../images/Timelapse/Timelapse_unzip.png)
 
