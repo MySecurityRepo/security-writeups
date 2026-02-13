@@ -83,7 +83,7 @@ We are logged in with the *legacyy* user. The first thing i did was try to see w
 ![diagram](../images/Timelapse/Timelapse_legacyywhoami2.png)
 
 Beside being part of the *Remote Management Users* group, the privileges and groups are the ones assigned usually to normal users.
-Going ahead with internal enumeration we can see that this user doesn't have many permissions and access to few resources.
+Going ahead with internal enumeration we can see that this user doesn't have many permissions and have access to few resources.
 
 However i remembered that we we had the *Helpdesk* folder in the share which we didn't use yet (to access we used only the content of the *Dev* folder).
 *Helpdesk* contains Microsoft documentation about LAPS (Local Administrator Password Solution) and the installer file. LAPS is a Microsoft solution that automatically manages and rotates the local Administrator password on domain-joined machines. The password of the local administrator is written as a plaintext attribute on the computer object *ms-Mcs-AdmPwd*. Inspecting the documentation we can read that a component called CSE is installed by default when running the installer and the main binary will be located at: *C:\Program Files\LAPS\CSE\AdmPwd.dll*. We can see that this binary is present on the machine so LAPS should be installed. We can try to read the *ms-Mcs-AdmPwd* property with this command:
