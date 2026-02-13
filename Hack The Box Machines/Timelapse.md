@@ -100,7 +100,7 @@ From this we can see that on *dc01.timelapse.htb* the group *LAPS_Readers* has e
 ![diagram](../images/Timelapse/Timelapse_LAPSReaders.png)
 
 We see that the *svc_deploy* user is member of the group, so if we can access with this user we should be able to read the admin password.
-I used this command to search the filesystem for a the *svc_deploy* string:
+I used this command to search the filesystem for the *svc_deploy* string:
 
 ![diagram](../images/Timelapse/Timelapse_Search_svc_deploy.png)
 
