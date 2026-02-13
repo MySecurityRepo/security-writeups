@@ -17,7 +17,7 @@ I tried to get more information with the service scan + default scripts scan.
 From this scan we have obtained the name of domain name *timelaps.htb* and the FQDN of the machine *dc01.timelaps.htb*. We can add them to /etc/hosts linked to the machine IP.
 Also we can confirm that the service port 5986 is winrm over HTTPS (Microsoft HTTPAPI).
 
-*******Foothold*******
+*******2 Foothold*******
 
 Since SMB is the easier service to interact i started with that one.
 
@@ -74,7 +74,7 @@ Now we can use the new files to try to access with evil-winrm:
 ![diagram](../images/Timelapse/Timelapse_legacyyauth.png)
 
 
-*******Post-Exploitation and Privilege Escalation*******
+*******3 Post-Exploitation and Privilege Escalation*******
 
 We are logged in with the *legacyy* user. The first thing i did was try to see which privileges he had:
 
