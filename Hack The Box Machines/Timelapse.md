@@ -14,8 +14,8 @@ I tried to get more information with the service scan + default scripts scan.
 
 ![diagram](../images/Timelapse/Timelapse_nmap3.png)
 
-From this scan we have obtained the name of domain name *timelaps.htb* and the FQDN of the machine *dc01.timelaps.htb*. We can add them to /etc/hosts linked to the machine IP.
-Also we can confirm that the service port 5986 is winrm over HTTPS (Microsoft HTTPAPI).
+From this scan we have obtained the domain name *timelaps.htb* and the FQDN of the machine *dc01.timelaps.htb*. We can add them to /etc/hosts assigned to the machine IP.
+Also we can confirm that the service running on port 5986 is winrm over HTTPS (Microsoft HTTPAPI).
 
 *******2 Foothold*******
 
