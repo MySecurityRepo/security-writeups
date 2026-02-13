@@ -6,7 +6,7 @@ Timelapse is an HTB Windows machine classified as Easy.
 
 ![diagram](../images/Timelapse/Timelapse_nmap1.png)
 
-The result shows several TCP ports open. We can recognize this machine is a domain controller for the presence of the kerberos service on port 88.
+The result shows several TCP ports open. We can recognize this machine as a domain controller for the presence of the kerberos service on port 88.
 Also there are interesting services which we can interact with like SMB (445), RPC (135), ldap (389, 636) and possibly winrm over https (5986).
 I tried to get more information with the service scan + default scripts scan.
 
