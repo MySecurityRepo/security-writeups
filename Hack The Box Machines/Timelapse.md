@@ -44,7 +44,7 @@ The zip contained a .pfx file.
 ![diagram](../images/Timelapse/Timelapse_pxffile.png)
 
 A .pfx file is a password-protected, binary file used in windows to securely store a SSL/TLS certificate, its corresponding private key, and optionally other intermediate certificates.
-The winrm protocol on windows supports client authentication through SSL/TLS certificates, if the certificate is mapped to a valid user with Remote Management access and client authentication is enabled. This is another authentication mechanism valid for winrm other than Basic auth (username+password), NTLM and Kerberos. At this point we don't know yet that this is the case, first we need to inspect the content of the .pfx file, but it's a good guess (given also the name of the zip file). trying to inspect the .pfx file we see that it's password protected, so we do the same procedure as above:
+The winrm protocol on windows supports client authentication through SSL/TLS certificates, if the certificate is mapped to a valid user with Remote Management access and client authentication is enabled. This is another authentication mechanism valid for winrm other than Basic auth (username+password), NTLM and Kerberos. At this point we don't know yet that this is the case, first we need to inspect the content of the .pfx file, but it's a good guess (given also the name of the zip file). Trying to inspect the .pfx file we see that it's password protected, so we do the same procedure as above:
 
 ![diagram](../images/Timelapse/Timelapse_readpfx1.png)
 
