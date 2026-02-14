@@ -27,7 +27,7 @@ The Guest user has read access over the *Shares* share. So i downloaded everythi
 
 ![diagram](../images/Timelapse/Timelapse_shares2.png)
 
-In the Dev share there is a zip file colled *winrm_backup.zip*. The name suggests that has something to do with winrm, so i tried to extract it:
+In the Dev share there is a zip file called *winrm_backup.zip*. The name suggests that has something to do with winrm, so i tried to extract it:
 
 ![diagram](../images/Timelapse/Timelapse_unzip.png)
 
