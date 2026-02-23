@@ -82,7 +82,7 @@ This field is computed based on other Cap fields and the kernel checks it (at sy
 
 ![diagram](../images/Data/Data_Cap2.png)
 
-We can see that the set of effective capabilities comprises CAP_SYS_ADMIN a capability that allow us to mount he file system and manipulate namespaces. 
+We can see that the set of effective capabilities comprises CAP_SYS_ADMIN a capability that allow us to mount the file system and manipulate namespaces. 
 So we see that we can mount /dev/sda1, the host root partition, to a new directory inside the container and move there.
 
 ![diagram](../images/Data/Data_esc.png)
