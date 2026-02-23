@@ -17,8 +17,6 @@ While 22 is hosting the ssh service, we can see that on port 3000 is running Gra
 
 This version of Grafana has a path traversal vulnerability which results in Local File Inclusion, allowing us to access files in the target operating system which can be accessed by the user running the Grafana Service.
 
-![diagram](../images/Data/Data_Grafana2.png)
-
 I have used an exploit to download the database file:
 
 ![diagram](../images/Data/Data_exp.png)
