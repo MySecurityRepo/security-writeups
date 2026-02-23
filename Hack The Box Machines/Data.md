@@ -69,11 +69,11 @@ However it requires the container id which we want to run a command in. Our user
 
 ![diagram](../images/Data/Data_containerid.png)
 
-Now we can run the command. Because of the wildcard we can add whatever argument we want to the command, so we try to spwan a shell inside the container as the root user:
+Now we can run the command. Because of the wildcard we can add whatever argument we want to the command, so we try to spawn a shell inside the container as the root user:
 
 ![diagram](../images/Data/Data_docker_root.png)
 
-We have root privileges inside the container, so we only have to escape the container environment to acquire root privileges on the host. If we anumerate the capabilities we find:
+We have root privileges inside the container, so we only have to escape the container environment to acquire root privileges on the host. If we enumerate the capabilities we find:
 
 ![diagram](../images/Data/Data_Cap.png)
 
