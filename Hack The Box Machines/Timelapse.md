@@ -67,7 +67,7 @@ Now let's inspect the content of the certificate:
 
 ![diagram](../images/Timelapse/Timelapse_certinfo2.png)
 
-From this we can see that has been issued by `*legacyy@timelapse.htb*` (Active Directory uses that UPN to map the certificate to a user account) and that is a *TLS Web Client Authentication* certificate.
+From this we can see that has been issued by *`legacyy@timelapse.htb`* (Active Directory uses that UPN to map the certificate to a user account) and that is a *TLS Web Client Authentication* certificate.
 
 Now we can use the new files to try to access with evil-winrm:
 
