@@ -90,6 +90,6 @@ So i tried to read the content of the SAM file and i found the Administrator has
 
 ![diagram](../images/Cicada/Cicada_sam.png)
 
-After we can pass the hash and access as Administrator:
+After that we can pass the hash and access as Administrator:
 
 ![diagram](../images/Cicada/Cicada_admin.png)
