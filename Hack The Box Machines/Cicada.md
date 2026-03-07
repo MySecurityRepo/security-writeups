@@ -42,7 +42,7 @@ Then let's spray the password over the found users:
 
 ![diagram](../images/Cicada/Cicada_spray.png)
 
-Good, we have found a domain user. At this point i tried to access with winrm but i couldn't. 
+Good, we have found working domain user's credentials. At this point i tried to access with winrm but i couldn't. 
 To confirm i enumerated the members of the *Remote Management Users* group with rpcclient. First we have to find the group RID querying the builtin groups:
 
 ![diagram](../images/Cicada/Cicada_groups1.png)
