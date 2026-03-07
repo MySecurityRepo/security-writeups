@@ -85,7 +85,7 @@ We can see that this user is very powerfull, since is member of the *Backup Oper
 
 ![diagram](../images/Cicada/Cicada_whoami2.png)
 
-However when i tried to create show copies to access the NTDS.dit file i couldn't, as it requires admin privileges.
+However when i tried to create shadow copies to access the NTDS.dit file i couldn't, as it requires admin privileges.
 So i tried to read the content of the SAM file and i found the Administrator hash:
 
 ![diagram](../images/Cicada/Cicada_sam.png)
