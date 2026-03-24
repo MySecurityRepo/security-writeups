@@ -33,7 +33,7 @@ So now we have the credentials to access the web appplication. From within we ca
 
 ![diagram](../images/Reset/Reset_logs2.png)
 
-Even though only two options are given from the frontend we can always try to include differenet files, crafting our requests. 
+Even though only two options are given from the frontend we can always try to include different files, crafting our requests. 
 I tried to include /etc/passwd but it doesn't work.
 So noticing that the webserver is running apache We can try to include apache logs:
 
