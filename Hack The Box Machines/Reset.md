@@ -59,3 +59,26 @@ So we can use the following request to get a reverse shell:
 
 *******3 Privilege Escalation*******
 
+The *www-data* user is also a member of the adm group, this group can read logs (as we could infer from what we have done so far).
+In the system are present 2 users: *local* and *sadm*.
+Since from my internal enumeration i found that *sadm* was allowed to run rsh commands (from the content of /etc/hosts.equiv), i went to the */var/log* folder and searched for the string *sadm* in all the files:
+![diagram](../images/Reset/Reset_grep_logs.png)
+
+This will output all the content which includes *sadm* from all the files.
+The file audit.log, depending on the configuration can contain different events, in this case recorded system calls with also commands. Some of the commands where encoded in hex format.
+Decoding one of these commands i could retrieve the password of the *sadm* user:
+
+![diagram](../images/Reset/Reset_sadm_pass.png)
+
+and i could get a shell as this user:
+
+![diagram](../images/Reset/Reset_sadm_shell.png)
+
+From the output above we can see that the *sadm* user can use *sudo* the command *nano /etc/firewall.sh*.
+This offers a privilege escaltion path since we can spawn a shell through *nano*, as aligned here:
+
+![diagram](../images/Reset/Reset_GTFOBins.png)
+
+Following the procedure we get a shell as root:
+
+![diagram](../images/Reset/Reset_root.png)
